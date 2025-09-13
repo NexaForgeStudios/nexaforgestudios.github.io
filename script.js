@@ -86,7 +86,6 @@ restartAutoPlay();
 
 /*************************
  * Auth modal + Firebase integration
- * Remplace les valeurs firebaseConfig par les tiennes dans la console Firebase.
  *************************/
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import {
@@ -100,14 +99,14 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-// --- REMPLACEZ ICI AVEC VOS CLÉS FIREBASE ---
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDmose-4Yja2ZIxjKXV9oWInF9dKFcYvYM",
+  authDomain: "nexaforge-studios-66fbe.firebaseapp.com",
+  projectId: "nexaforge-studios-66fbe",
+  storageBucket: "nexaforge-studios-66fbe.firebasestorage.app",
+  messagingSenderId: "296882687491",
+  appId: "1:296882687491:web:4aeb4ef4557b61daf58836",
+  measurementId: "G-7GJXYPMSZD"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -180,48 +179,80 @@ authAction.addEventListener('click', async () => {
     }
 });
 
-// Social logins
+// Social logins - Configuration corrigée
 document.getElementById('btn-google').addEventListener('click', async () => {
     const provider = new GoogleAuthProvider();
+    // Ajouter des scopes optionnels si nécessaire
+    provider.addScope('profile');
+    provider.addScope('email');
+    
     try {
         const result = await signInWithPopup(auth, provider);
-        await setDoc(doc(db, 'users', result.user.uid), { email: result.user.email, provider: 'google' }, { merge: true });
-        onLoginSuccess(result.user.email);
-    } catch (err) { authMessage.textContent = 'Google error: ' + (err.message || err); authMessage.style.display = 'block'; }
+        await setDoc(doc(db, 'users', result.user.uid), { 
+            email: result.user.email, 
+            displayName: result.user.displayName,
+            provider: 'google',
+            lastLogin: new Date().toISOString()
+        }, { merge: true });
+        onLoginSuccess(result.user.email || result.user.displayName);
+    } catch (err) { 
+        console.error('Google Auth Error:', err);
+        authMessage.textContent = 'Google error: ' + (err.message || err); 
+        authMessage.style.display = 'block'; 
+    }
 });
 
 document.getElementById('btn-apple').addEventListener('click', async () => {
     const provider = new OAuthProvider('apple.com');
+    // Configuration pour Apple
+    provider.addScope('email');
+    provider.addScope('name');
+    
     try {
         const result = await signInWithPopup(auth, provider);
-        await setDoc(doc(db, 'users', result.user.uid), { email: result.user.email || null, provider: 'apple' }, { merge: true });
-        onLoginSuccess(result.user.email || 'Utilisateur Apple');
-    } catch (err) { authMessage.textContent = 'Apple error: ' + (err.message || err); authMessage.style.display = 'block'; }
+        await setDoc(doc(db, 'users', result.user.uid), { 
+            email: result.user.email || null, 
+            displayName: result.user.displayName || 'Apple User',
+            provider: 'apple',
+            lastLogin: new Date().toISOString()
+        }, { merge: true });
+        onLoginSuccess(result.user.email || result.user.displayName || 'Apple User');
+    } catch (err) { 
+        console.error('Apple Auth Error:', err);
+        authMessage.textContent = 'Apple error: ' + (err.message || err); 
+        authMessage.style.display = 'block'; 
+    }
 });
 
 document.getElementById('btn-epic').addEventListener('click', async () => {
-    // Epic Games requiert configuration OAuth côté Firebase / Epic dev portal.
-    const provider = new OAuthProvider('epicgames.com');
-    try {
-        const result = await signInWithPopup(auth, provider);
-        await setDoc(doc(db, 'users', result.user.uid), { email: result.user.email || null, provider: 'epic' }, { merge: true });
-        onLoginSuccess(result.user.email || 'Utilisateur Epic');
-    } catch (err) { authMessage.textContent = 'Epic Games error: ' + (err.message || err); authMessage.style.display = 'block'; }
+    // Epic Games nécessite une configuration personnalisée
+    authMessage.textContent = "Epic Games authentication requires custom OAuth setup. Please contact support.";
+    authMessage.style.display = 'block';
 });
 
 document.getElementById('btn-xbox').addEventListener('click', async () => {
-    // Utiliser Microsoft provider pour Xbox / Live
     const provider = new OAuthProvider('microsoft.com');
+    provider.addScope('https://graph.microsoft.com/user.read');
+    
     try {
         const result = await signInWithPopup(auth, provider);
-        await setDoc(doc(db, 'users', result.user.uid), { email: result.user.email || null, provider: 'microsoft' }, { merge: true });
-        onLoginSuccess(result.user.email || 'Utilisateur Microsoft');
-    } catch (err) { authMessage.textContent = 'Xbox/Microsoft error: ' + (err.message || err); authMessage.style.display = 'block'; }
+        await setDoc(doc(db, 'users', result.user.uid), { 
+            email: result.user.email || null, 
+            displayName: result.user.displayName || 'Microsoft User',
+            provider: 'microsoft',
+            lastLogin: new Date().toISOString()
+        }, { merge: true });
+        onLoginSuccess(result.user.email || result.user.displayName || 'Microsoft User');
+    } catch (err) { 
+        console.error('Microsoft Auth Error:', err);
+        authMessage.textContent = 'Xbox/Microsoft error: ' + (err.message || err); 
+        authMessage.style.display = 'block'; 
+    }
 });
 
 document.getElementById('btn-ps').addEventListener('click', () => {
-    // PlayStation : nécessite OAuth côté Sony + configuration serveur / Firebase custom provider
-    authMessage.textContent = "PlayStation requires OAuth configuration on the Sony portal. See Firebase console.";
+    // PlayStation nécessite OAuth côté Sony + configuration serveur
+    authMessage.textContent = "PlayStation authentication requires custom OAuth setup. Please contact support.";
     authMessage.style.display = 'block';
 });
 
@@ -229,8 +260,9 @@ document.getElementById('btn-ps').addEventListener('click', () => {
 function onLoginSuccess(email, isNew = false) {
     closeModal();
     const openAuthLink = document.getElementById('open-auth');
-    openAuthLink.textContent = email.split('@')[0] || 'Mon compte';
-    // Add logout option if not already
+    openAuthLink.textContent = email ? (email.split('@')[0] || 'My account') : 'My account';
+    
+    // Add logout option if not already present
     if (!document.getElementById('logout-link')) {
         const li = document.createElement('li');
         const a = document.createElement('a');
@@ -239,21 +271,56 @@ function onLoginSuccess(email, isNew = false) {
         a.textContent = "Logout";
         a.addEventListener('click', async (e) => {
             e.preventDefault();
-            await signOut(auth);
-            openAuthLink.textContent = "Login";
-            a.parentElement.remove();
+            try {
+                await signOut(auth);
+                openAuthLink.textContent = "Login";
+                a.parentElement.remove();
+                console.log('User logged out successfully');
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
         });
         document.querySelector('.nav-menu').appendChild(li).appendChild(a);
     }
-    // Optionally store or show message
+    
     console.log((isNew ? 'Sign Up' : 'Login') + ' réussie pour', email);
 }
 
-// Listen to auth state changes (optional safety)
+// Listen to auth state changes
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 onAuthStateChanged(auth, user => {
     if (user) {
         const openAuthLink = document.getElementById('open-auth');
-        openAuthLink.textContent = user.email ? user.email.split('@')[0] : 'My account';
+        openAuthLink.textContent = user.email ? user.email.split('@')[0] : (user.displayName || 'My account');
+        
+        // Add logout button if user is logged in and button doesn't exist
+        if (!document.getElementById('logout-link')) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = "#";
+            a.id = "logout-link";
+            a.textContent = "Logout";
+            a.addEventListener('click', async (e) => {
+                e.preventDefault();
+                try {
+                    await signOut(auth);
+                    openAuthLink.textContent = "Login";
+                    a.parentElement.remove();
+                } catch (error) {
+                    console.error('Logout error:', error);
+                }
+            });
+            document.querySelector('.nav-menu').appendChild(li).appendChild(a);
+        }
+    } else {
+        // User is signed out
+        const openAuthLink = document.getElementById('open-auth');
+        openAuthLink.textContent = "Login";
+        
+        // Remove logout button if it exists
+        const logoutLink = document.getElementById('logout-link');
+        if (logoutLink) {
+            logoutLink.parentElement.remove();
+        }
     }
 });

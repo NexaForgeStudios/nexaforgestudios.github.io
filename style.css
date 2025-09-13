@@ -63,7 +63,7 @@ body {
   color: #00ff41;
 }
 
-.social-club-btn {
+.auth-btn {
   background: #00ff41;
   color: #000 !important;
   padding: 8px 16px;
@@ -72,7 +72,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.social-club-btn:hover {
+.auth-btn:hover {
   background: #008512;
   transform: translateY(-1px);
 }
@@ -102,6 +102,12 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-slide {
@@ -169,6 +175,15 @@ body {
   letter-spacing: 3px;
 }
 
+.hero-title-dp {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 3px;
+}
+
 .hero-subtitle {
   font-size: 1.5rem;
   color: #cccccc;
@@ -203,6 +218,13 @@ body {
   transform: translateY(-2px);
 }
 
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
 .btn-secondary {
   background: transparent;
   color: #ffffff;
@@ -215,13 +237,6 @@ body {
   border-radius: 3px;
   transition: all 0.3s ease;
 }
-
-.btn-secondary:hover {
-  background: #ffffff;
-  color: #000;
-  transform: translateY(-2px);
-}
-
 /* Background layer (same as original hero background) */
 .hero-bg-layer {
   position: absolute;
@@ -456,6 +471,10 @@ body {
   gap: 20px;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.social-links img {
+  width: 20px;
 }
 
 .social-links a {
