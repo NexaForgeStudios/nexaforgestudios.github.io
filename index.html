@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexaForge Studios - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/NexaForge_Studios.png" type="image/x-icon">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJDYXJC9G5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJDYXJC9G5');
+</script>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/NexaForge_Studios.png" alt="Logo Icon">
+            </div>
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#" class="social-club-btn">Social Club</a></li>
+                    <li><a href="#" id="open-auth">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger" aria-label="menu" aria-expanded="false" role="button">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carousel (top) - garde les textes/images originaux dans le premier slide -->
+    <section class="carousel" id="carousel" aria-roledescription="carousel">
+        <!-- Slide 1 : copie exacte du hero original en fond -->
+        <div class="carousel-slide active hero-slide" id="slide-0">
+            <div class="hero-bg-layer"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">NexaForge Studios</h1>
+                <p class="hero-subtitle">Découvrez nos univers, vivez des aventures inoubliables</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Découvrir nos jeux</a>
+                    <a href="#" class="btn-secondary">Social Club</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 : même image de fond (conserve les images originelles), variation visuelle léger overlay -->
+        <div class="carousel-slide" id="slide-1">
+            <div class="hero-bg-layer" style="filter: hue-rotate(6deg) saturate(1.02);"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">NexaForge Studios</h1>
+                <p class="hero-subtitle">Découvrez nos univers, vivez des aventures inoubliables</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Découvrir nos jeux</a>
+                    <a href="#" class="btn-secondary">Social Club</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide" id="slide-2">
+            <div class="hero-bg-layer" style="filter: brightness(.9) contrast(1.02);"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">NexaForge Studios</h1>
+                <p class="hero-subtitle">Découvrez nos univers, vivez des aventures inoubliables</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Découvrir nos jeux</a>
+                    <a href="#" class="btn-secondary">Social Club</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators" id="carousel-indicators" aria-hidden="false"></div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games-section">
+        <div class="container">
+            <h2 class="section-title fade-in">GAMES</h2>
+            <div class="games-grid">
+                <div class="game-card fade-in">
+                    <div class="game-image">
+                        <img src="img/dp_splash.png" alt="Deadline Protocol Image">
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Deadline Protocol</h3>
+                        <p class="game-description">In development...</p>
+                        <a href="#" class="game-btn">Find out more</a>
+                    </div>
+                </div>
+                <div class="game-card fade-in">
+                    <div class="game-image">GTA V</div>
+                    <div class="game-info">
+                        <h3 class="game-title">Grand Theft Auto V</h3>
+                        <p class="game-description">L'expérience criminelle ultime dans Los Santos et Blaine County.</p>
+                        <a href="#" class="game-btn">Jouer maintenant</a>
+                    </div>
+                </div>
+                <div class="game-card fade-in">
+                    <div class="game-image">RDR2</div>
+                    <div class="game-info">
+                        <h3 class="game-title">Red Dead Redemption 2</h3>
+                        <p class="game-description">Vivez l'épopée d'Arthur Morgan dans l'Ouest sauvage américain.</p>
+                        <a href="#" class="game-btn">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title fade-in">NEWS</h2>
+            <div class="news-grid">
+                <article class="news-card fade-in">
+                    <div class="news-image">NEWS</div>
+                    <div class="news-content">
+                        <div class="news-date">15 Mars 2025</div>
+                        <h3 class="news-title">GTA Online : Nouvelle mise à jour disponible</h3>
+                        <p class="news-excerpt">Découvrez les nouveaux contenus, véhicules et missions ajoutés à GTA
+                            Online.</p>
+                    </div>
+                </article>
+                <article class="news-card fade-in">
+                    <div class="news-image">UPDATE</div>
+                    <div class="news-content">
+                        <div class="news-date">10 Mars 2025</div>
+                        <h3 class="news-title">Red Dead Online : Événement spécial</h3>
+                        <p class="news-excerpt">Participez à l'événement hebdomadaire avec des récompenses exclusives.
+                        </p>
+                    </div>
+                </article>
+                <article class="news-card fade-in">
+                    <div class="news-image">INFO</div>
+                    <div class="news-content">
+                        <div class="news-date">5 Mars 2025</div>
+                        <h3 class="news-title">Social Club : Nouveaux avantages</h3>
+                        <p class="news-excerpt">Découvrez les nouvelles fonctionnalités et récompenses du Social Club.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jeux</h3>
+                    <ul>
+                        <li><a href="#">Grand Theft Auto VI</a></li>
+                        <li><a href="#">Grand Theft Auto V</a></li>
+                        <li><a href="#">Red Dead Redemption 2</a></li>
+                        <li><a href="#">GTA Online</a></li>
+                        <li><a href="#">Red Dead Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Social Club</a></li>
+                        <li><a href="#">NexaForge Studios Launcher</a></li>
+                        <li><a href="#">Assistance</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Enterprise</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="https://discord.gg/Z3jDHQnrAR">Discord</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#">📱</a>
+                <a href="#">🎮</a>
+                <a href="#">💻</a>
+                <a href="#">📺</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NexaForge Studios, Inc. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="auth-modal" aria-hidden="true">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+            <div class="close" id="auth-close">&times;</div>
+            <h2 id="auth-title">Login / Sign Up</h2>
+
+            <label for="auth-email" style="display:none">Email</label>
+            <input id="auth-email" type="email" placeholder="Email" required autocomplete="email">
+
+            <label for="auth-password" style="display:none">Password</label>
+            <input id="auth-password" type="password" placeholder="Mot de passe" required
+                autocomplete="current-password">
+
+            <button class="primary" id="auth-action">Login</button>
+            <button class="secondary" id="toggle-auth-mode" style="margin-top:6px">I do not have an account ·
+                Register</button>
+
+            <div style="margin-top:12px;color:#999;text-align:center;font-size:0.9rem">or connect with</div>
+
+            <div class="socials" style="margin-top:10px;">
+                <button id="btn-google">Google</button>
+                <button id="btn-apple">Apple</button>
+                <button id="btn-epic">Epic Games</button>
+                <button id="btn-xbox">Xbox / Microsoft</button>
+                <button id="btn-ps" style="grid-column: 1 / -1;">PlayStation</button>
+            </div>
+            <div id="auth-message" style="margin-top:10px;color:#f88;font-size:0.95rem;display:none"></div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
