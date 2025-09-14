@@ -1,0 +1,6 @@
+# Autoriser tous les robots
+User-agent: *
+Allow: /
+
+# Lien vers le sitemap
+Sitemap: https://nexaforgestudios.com/sitemap.xml
