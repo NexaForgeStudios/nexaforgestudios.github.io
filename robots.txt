@@ -1,6 +1,9 @@
-# Autoriser tous les robots
 User-agent: *
 Allow: /
 
-# Lien vers le sitemap
+# Bloquer les dossiers inutiles
+Disallow: /node_modules/
+Disallow: /scripts/
+
+# Sitemap
 Sitemap: https://nexaforgestudios.com/sitemap.xml
