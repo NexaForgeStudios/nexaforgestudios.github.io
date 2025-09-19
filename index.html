@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>NexaForge Studios - Home</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="description"
         content="Home of NexaForge Studios, an independent game development studio using Unreal Engine 5 to create immersive gaming experiences.">
     <meta name="keywords"
@@ -16,40 +16,41 @@
         content="Home of NexaForge Studios, an independent game development studio using Unreal Engine 5 to create immersive gaming experiences.">
     <meta property="og:image" content="/favicon.ico">
     <meta property="og:url" content="https://www.nexaforgestudios.com">
-    <meta property="og:type" content="home">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="NexaForge Studios">
-    <meta property="og:locale" content="en">
+    <meta property="og:locale" content="en_EN">
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJDYXJC9G5"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-MJDYXJC9G5');
-</script>
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "Organization",
-"name": "NexaForge Studios",
-"url": "https://www.nexaforgestudios.com",
-}
 </script>
 
 <body>
     <header class="header">
         <div class="nav-container">
             <div class="logo">
-                <img src="img/NexaForge_Studios.png" alt="Logo Icon">
+                <img src="img/NexaForge_Studios.png" alt="NexaForge Studios Logo">
             </div>
             <nav>
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#" id="open-auth" class="auth-btn">Login</a></li>
+                    <li><a href="#" data-translate="nav.games">Jeux</a></li>
+                    <li><a href="#" data-translate="nav.news">Actualités</a></li>
+                    <li><a href="#" data-translate="nav.support">Support</a></li>
+                    <li><a href="#" data-translate="nav.shop">Boutique</a></li>
+                    <li>
+                        <select id="language-select" class="language-select">
+                            <option value="fr">🇫🇷 FR</option>
+                            <option value="de">🇩🇪 DE</option>
+                            <option value="en">🇬🇧 EN</option>
+                            <option value="ru">🇷🇺 RU</option>
+                            <option value="zh">🇨🇳 中文</option>
+
+                        </select>
+                    </li>
+                    <li><a href="#" id="open-auth" class="auth-btn" data-translate="nav.login">Connexion</a></li>
                 </ul>
             </nav>
             <div class="hamburger" id="hamburger" aria-label="menu" aria-expanded="false" role="button">
@@ -57,20 +58,23 @@
             </div>
         </div>
     </header>
-    <!-- Carousel (top) -->
+
+    <!-- Carousel -->
     <section class="carousel" id="carousel" aria-roledescription="carousel">
         <!-- Slide 1 -->
         <div class="carousel-slide active hero-slide" id="slide-0">
             <div class="hero-bg-layer">
-                <img src="img/dp_splashwithout_title.png" alt="">
+                <img src="img/dp_splashwithout_title.png" alt="Deadline Protocol Background">
             </div>
             <div class="hero-content">
                 <h1 class="hero-title-dp">Deadline Protocol</h1>
-                <p class="hero-subtitle">A game where you play as a young high school student who must complete missions
-                    given by a strange scientist in order to pay off his mother's debts.</p>
+                <p class="hero-subtitle" data-translate="hero.deadlineProtocolDesc">Un jeu où vous incarnez un jeune
+                    lycéen qui doit accomplir des missions données par un étrange scientifique afin de rembourser les
+                    dettes de sa mère.</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn-primary">Discover the game</a>
-                    <a href="https://discord.gg/AxZae5zBmr" class="btn-secondary">Discord</a>
+                    <a href="#" class="btn-primary" data-translate="hero.discoverGame">Découvrir le jeu</a>
+                    <a href="https://discord.gg/AxZae5zBmr" class="btn-secondary"
+                        data-translate="hero.discord">Discord</a>
                 </div>
             </div>
         </div>
@@ -78,159 +82,170 @@
         <div class="carousel-slide" id="slide-1">
             <div class="hero-bg-layer" style="filter: hue-rotate(6deg) saturate(1.02);"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Nothing</h1>
-                <p class="hero-subtitle">Nothing</p>
+                <h1 class="hero-title">Rien</h1>
+                <p class="hero-subtitle">Rien</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn-primary">Nothing</a>
-                    <a href="#" class="btn-secondary">Nothing</a>
+                    <a href="#" class="btn-primary">Rien</a>
+                    <a href="#" class="btn-secondary">Rien</a>
                 </div>
             </div>
         </div>
         <!-- Indicators -->
         <div class="carousel-indicators" id="carousel-indicators" aria-hidden="false"></div>
     </section>
+
     <!-- Games Section -->
     <section class="games-section">
         <div class="container">
-            <h2 class="section-title fade-in">GAMES</h2>
+            <h2 class="section-title fade-in" data-translate="sections.games">JEUX</h2>
             <div class="games-grid">
                 <div class="game-card fade-in">
                     <div class="game-image">
-                        <img src="img/dp_splashwithout_title.png" alt="Deadline Protocol Image">
+                        <img src="img/dp_splashwithout_title.png" alt="Deadline Protocol"
+                            style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     <div class="game-info">
-                        <h3 class="game-title">Deadline Protocol</h3>
-                        <p class="game-description">In development...</p>
-                        <a href="#" class="game-btn">Find out more</a>
-                    </div>
-                </div>
-                <div class="game-card fade-in">
-                    <div class="game-image">Nothing</div>
-                    <div class="game-info">
-                        <h3 class="game-title">Nothing</h3>
-                        <p class="game-description">Nothing</p>
-                        <a href="#" class="game-btn">Nothing</a>
+                        <h3 class="game-title" data-translate="games.deadlineProtocol">Deadline Protocol</h3>
+                        <p class="game-description" data-translate="games.inDevelopment">En développement...</p>
+                        <a href="#" class="game-btn" data-translate="games.findOutMore">En savoir plus</a>
                     </div>
                 </div>
                 <div class="game-card fade-in">
-                    <div class="game-image">Nothing</div>
+                    <div class="game-image" data-translate="games.nothing">Rien</div>
                     <div class="game-info">
-                        <h3 class="game-title">Nothing</h3>
-                        <p class="game-description">Nothing</p>
-                        <a href="#" class="game-btn">Nothing</a>
+                        <h3 class="game-title" data-translate="games.nothing">Rien</h3>
+                        <p class="game-description" data-translate="games.nothing">Rien</p>
+                        <a href="#" class="game-btn" data-translate="games.nothing">Rien</a>
+                    </div>
+                </div>
+                <div class="game-card fade-in">
+                    <div class="game-image" data-translate="games.nothing">Rien</div>
+                    <div class="game-info">
+                        <h3 class="game-title" data-translate="games.nothing">Rien</h3>
+                        <p class="game-description" data-translate="games.nothing">Rien</p>
+                        <a href="#" class="game-btn" data-translate="games.nothing">Rien</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- News Section -->
     <section class="news-section">
         <div class="container">
-            <h2 class="section-title fade-in">NEWS</h2>
+            <h2 class="section-title fade-in" data-translate="sections.news">ACTUALITÉS</h2>
             <div class="news-grid">
                 <article class="news-card fade-in">
-                    <div class="news-image">NEWS</div>
+                    <div class="news-image">ACTUALITÉS</div>
                     <div class="news-content">
-                        <div class="news-date">Nothing</div>
-                        <h3 class="news-title">Nothing</h3>
-                        <p class="news-excerpt">Nothing</p>
+                        <div class="news-date" data-translate="news.nothing">Rien</div>
+                        <h3 class="news-title" data-translate="news.nothing">Rien</h3>
+                        <p class="news-excerpt" data-translate="news.nothing">Rien</p>
                     </div>
                 </article>
                 <article class="news-card fade-in">
-                    <div class="news-image">UPDATE</div>
+                    <div class="news-image">MISE À JOUR</div>
                     <div class="news-content">
-                        <div class="news-date">Nothing</div>
-                        <h3 class="news-title">Nothing</h3>
-                        <p class="news-excerpt">Nothing</p>
+                        <div class="news-date" data-translate="news.nothing">Rien</div>
+                        <h3 class="news-title" data-translate="news.nothing">Rien</h3>
+                        <p class="news-excerpt" data-translate="news.nothing">Rien</p>
                     </div>
                 </article>
                 <article class="news-card fade-in">
                     <div class="news-image">INFO</div>
                     <div class="news-content">
-                        <div class="news-date">Nothing</div>
-                        <h3 class="news-title">Nothings</h3>
-                        <p class="news-excerpt">Nothing</p>
+                        <div class="news-date" data-translate="news.nothing">Rien</div>
+                        <h3 class="news-title" data-translate="news.nothing">Rien</h3>
+                        <p class="news-excerpt" data-translate="news.nothing">Rien</p>
                     </div>
                 </article>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Jeux</h3>
+                    <h3 data-translate="footer.games">Jeux</h3>
                     <ul>
-                        <li><a href="#">Deadline Protocol</a></li>
-                        <li><a href="#">Nothing</a></li>
-                        <li><a href="#">Nothing</a></li>
-                        <li><a href="#">Nothing</a></li>
-                        <li><a href="#">Nothing</a></li>
+                        <li><a href="#" data-translate="games.deadlineProtocol">Deadline Protocol</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Services</h3>
+                    <h3 data-translate="footer.services">Services</h3>
                     <ul>
-                        <li><a href="#">Nothing</a></li>
-                        <li><a href="#">Nothing</a></li>
-                        <li><a href="#">Nothing</a></li>
-                        <li><a href="#">Nothing</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
+                        <li><a href="#" data-translate="games.nothing">Rien</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Enterprise</h3>
+                    <h3 data-translate="footer.enterprise">Entreprise</h3>
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" data-translate="footer.about">À propos</a></li>
+                        <li><a href="#" data-translate="footer.careers">Carrières</a></li>
+                        <li><a href="#" data-translate="footer.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Community</h3>
+                    <h3 data-translate="footer.community">Communauté</h3>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="https://www.youtube.com/@NexaForge-Studios">YouTube</a></li>
-                        <li><a href="https://discord.gg/Z3jDHQnrAR">Discord</a></li>
+                        <li><a href="#" data-translate="footer.twitter">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/@NexaForge-Studios"
+                                data-translate="footer.youtube">YouTube</a></li>
+                        <li><a href="https://discord.gg/Z3jDHQnrAR" data-translate="footer.discord">Discord</a></li>
                     </ul>
                 </div>
             </div>
             <div class="social-links">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nexaforge.studios.off@hotmail.com"
-                    target="_blank"><img src="img/Gmail_icon.png" alt="GMAIL"></a>
+                    target="_blank">
+                    <img src="img/Gmail_icon.png" alt="Gmail">
+                </a>
                 <a href="https://outlook.live.com/mail/0/deeplink/compose?to=nexaforge.studios.off@hotmail.com"
-                    target="_blank"><img src="img/Microsoft_Office_Outlook.png" alt="OUTLOOK"></a>
+                    target="_blank">
+                    <img src="img/Microsoft_Office_Outlook.png" alt="Outlook">
+                </a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 NexaForge Studios, Inc. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2025 NexaForge Studios, Inc. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
     <!-- Auth Modal -->
     <div class="modal" id="auth-modal" aria-hidden="true">
         <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="auth-title">
             <div class="close" id="auth-close">&times;</div>
-            <h2 id="auth-title">Login / Sign Up</h2>
-            <label for="auth-email" style="display:none">Email</label>
-            <input id="auth-email" type="email" placeholder="Email" required autocomplete="email">
-            <label for="auth-password" style="display:none">Password</label>
+            <h2 id="auth-title" data-translate="auth.loginSignup">Connexion / Inscription</h2>
+            <label for="auth-email" style="display:none" data-translate="auth.email">Email</label>
+            <input id="auth-email" type="email" placeholder="Email" required autocomplete="email"
+                data-translate-placeholder="auth.email">
+            <label for="auth-password" style="display:none" data-translate="auth.password">Mot de passe</label>
             <input id="auth-password" type="password" placeholder="Mot de passe" required
-                autocomplete="current-password">
-            <button class="primary" id="auth-action">Login</button>
-            <button class="secondary" id="toggle-auth-mode" style="margin-top:6px">I do not have an account ·
-                Register</button>
-            <div style="margin-top:12px;color:#999;text-align:center;font-size:0.9rem">or connect with</div>
+                autocomplete="current-password" data-translate-placeholder="auth.password">
+            <button class="primary" id="auth-action" data-translate="auth.login">Connexion</button>
+            <button class="secondary" id="toggle-auth-mode" style="margin-top:6px" data-translate="auth.noAccount">Je
+                n'ai pas de compte · S'inscrire</button>
+            <div style="margin-top:12px;color:#999;text-align:center;font-size:0.9rem"
+                data-translate="auth.connectWith">ou se connecter avec</div>
             <div class="socials" style="margin-top:10px;">
-                <button id="btn-google">Google</button>
-                <button id="btn-apple">Apple</button>
-                <button id="btn-epic">Epic Games</button>
-                <button id="btn-xbox">Xbox / Microsoft</button>
-                <button id="btn-ps" style="grid-column: 1 / -1;">PlayStation</button>
+                <button id="btn-google" data-translate="auth.google">Google</button>
+                <button id="btn-apple" data-translate="auth.apple">Apple</button>
+                <button id="btn-epic" data-translate="auth.epic">Epic Games</button>
+                <button id="btn-xbox" data-translate="auth.xbox">Xbox / Microsoft</button>
+                <button id="btn-ps" style="grid-column: 1 / -1;" data-translate="auth.playstation">PlayStation</button>
             </div>
             <div id="auth-message" style="margin-top:10px;color:#f88;font-size:0.95rem;display:none"></div>
         </div>
     </div>
-    <script type="module" src="script.js"></script>
+<script src="script.js" type="module"></script>
 </body>
-
 </html>
