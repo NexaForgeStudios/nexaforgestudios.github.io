@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Bloquer les dossiers inutiles
-Disallow: /node_modules/
-Disallow: /scripts/
-
-# Sitemap
-Sitemap: https://nexaforgestudios.com/sitemap.xml
+Sitemap: https://www.nexaforgestudios.com/sitemap.xml
