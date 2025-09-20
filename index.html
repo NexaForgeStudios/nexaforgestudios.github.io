@@ -64,8 +64,8 @@
                     <li>
                         <select id="language-select" class="language-select">
                             <option value="fr">🇫🇷 FR</option>
-                            <option value="de">🇩🇪 DE</option>
                             <option value="en">🇬🇧 EN</option>
+                            <option value="de">🇩🇪 DE</option>
                             <option value="ru">🇷🇺 RU</option>
                             <option value="zh">🇨🇳 中文</option>
 
@@ -80,9 +80,8 @@
         </div>
     </header>
 
-    <!-- Carousel -->
     <section class="carousel" id="carousel" aria-roledescription="carousel">
-        <!-- Slide 1 -->
+
         <div class="carousel-slide active hero-slide" id="slide-0">
             <div class="hero-bg-layer">
                 <img src="img/dp_splashwithout_title.png" alt="Deadline Protocol Background">
@@ -99,23 +98,21 @@
                 </div>
             </div>
         </div>
-        <!-- Slide 2 -->
+
         <div class="carousel-slide" id="slide-1">
             <div class="hero-bg-layer" style="filter: hue-rotate(6deg) saturate(1.02);"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Rien</h1>
-                <p class="hero-subtitle">Rien</p>
+                <h1 class="hero-title" data-translate="hero.nothingTitle">Rien</h1>
+                <p class="hero-subtitle" data-translate="hero.nothingSubtitle">Rien</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn-primary">Rien</a>
-                    <a href="#" class="btn-secondary">Rien</a>
+                    <a href="#" class="btn-primary" data-translate="hero.btnNothing">Rien</a>
+                    <a href="#" class="btn-secondary" data-translate="hero.btnNothing">Rien</a>
                 </div>
             </div>
         </div>
-        <!-- Indicators -->
         <div class="carousel-indicators" id="carousel-indicators" aria-hidden="false"></div>
     </section>
 
-    <!-- Games Section -->
     <section class="games-section">
         <div class="container">
             <h2 class="section-title fade-in" data-translate="sections.games">JEUX</h2>
@@ -151,7 +148,6 @@
         </div>
     </section>
 
-    <!-- News Section -->
     <section class="news-section">
         <div class="container">
             <h2 class="section-title fade-in" data-translate="sections.news">ACTUALITÉS</h2>
@@ -184,7 +180,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -241,7 +236,6 @@
         </div>
     </footer>
 
-    <!-- Auth Modal -->
     <div class="modal" id="auth-modal" aria-hidden="true">
         <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="auth-title">
             <div class="close" id="auth-close">&times;</div>
@@ -258,16 +252,17 @@
             <div style="margin-top:12px;color:#999;text-align:center;font-size:0.9rem"
                 data-translate="auth.connectWith">ou se connecter avec</div>
             <div class="socials" style="margin-top:10px;">
-                <button id="btn-google" data-translate="auth.google">Google</button>
-                <button id="btn-apple" data-translate="auth.apple">Apple</button>
-                <button id="btn-epic" data-translate="auth.epic">Epic Games</button>
-                <button id="btn-xbox" data-translate="auth.xbox">Xbox / Microsoft</button>
-                <button id="btn-ps" style="grid-column: 1 / -1;" data-translate="auth.playstation">PlayStation</button>
+                <button id="btn-google"><img src="img/ggl-login.png" alt="Google Login"></button>
+                <button id="btn-apple"><img src="img/apple-login.svg" alt="Apple Login"></button>
+                <button id="btn-epic"><img src="img/eg-login.png" alt="Epic Games Login"></button>
+                <button id="btn-xbox"><img src="img/xbox_logo.png" alt="XBox Login"></button>
+                <button id="btn-ps" style="grid-column: 1 / -1;"><img src="img/ps_logopng.png" alt="PlayStayion Login"></button>
             </div>
             <div id="auth-message" style="margin-top:10px;color:#f88;font-size:0.95rem;display:none"></div>
         </div>
     </div>
     <script src="script.js" type="module"></script>
+    <script src="translate.json"></script>
 </body>
 
 </html>

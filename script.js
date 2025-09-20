@@ -1,151 +1,380 @@
-
 /*************************
  * Translations system
  *************************/
 const translations = {
-  "fr": {
-    "nav": {
-      "games": "Jeux",
-      "news": "Actualités",
-      "support": "Support",
-      "shop": "Boutique",
-      "login": "Connexion",
-      "logout": "Déconnexion",
-      "myAccount": "Mon compte"
+  fr: {
+    nav: {
+      games: "Jeux",
+      news: "Actualités",
+      support: "Support",
+      shop: "Boutique",
+      login: "Connexion",
+      logout: "Déconnexion",
+      myAccount: "Mon compte"
     },
-    "hero": {
-      "discoverGame": "Découvrir le jeu",
-      "discord": "Discord",
-      "deadlineProtocolDesc": "Un jeu où vous incarnez un jeune lycéen qui doit accomplir des missions données par un étrange scientifique afin de rembourser les dettes de sa mère."
+    hero: {
+      discoverGame: "Découvrir le jeu",
+      discord: "Discord",
+      deadlineProtocolDesc: "Un jeu où vous incarnez un jeune lycéen qui doit accomplir des missions données par un étrange scientifique afin de rembourser les dettes de sa mère.",
+      nothingSubtitle: "Rien",
+      nothingTitle: "Rien",
+      btnNothing: "Rien",
     },
-    "sections": {
-      "games": "JEUX",
-      "news": "ACTUALITÉS"
+    sections: {
+      games: "JEUX",
+      news: "ACTUALITÉS"
     },
-    "games": {
-      "deadlineProtocol": "Deadline Protocol",
-      "inDevelopment": "En développement...",
-      "findOutMore": "En savoir plus",
-      "nothing": "Rien"
+    games: {
+      deadlineProtocol: "Deadline Protocol",
+      inDevelopment: "En développement...",
+      findOutMore: "En savoir plus",
+      nothing: "Rien"
     },
-    "news": {
-      "nothing": "Rien"
+    news: {
+      nothing: "Rien"
     },
-    "footer": {
-      "games": "Jeux",
-      "services": "Services",
-      "enterprise": "Entreprise",
-      "community": "Communauté",
-      "about": "À propos",
-      "careers": "Carrières",
-      "contact": "Contact",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "discord": "Discord",
-      "copyright": "© 2025 NexaForge Studios, Inc. Tous droits réservés."
+    footer: {
+      games: "Jeux",
+      services: "Services",
+      enterprise: "Entreprise",
+      community: "Communauté",
+      about: "À propos",
+      careers: "Carrières",
+      contact: "Contact",
+      twitter: "Twitter",
+      youtube: "YouTube",
+      discord: "Discord",
+      copyright: "© 2025 NexaForge Studios, Inc. Tous droits réservés."
     },
-    "auth": {
-      "loginSignup": "Connexion / Inscription",
-      "email": "Email",
-      "password": "Mot de passe",
-      "login": "Connexion",
-      "signup": "S'inscrire",
-      "noAccount": "Je n'ai pas de compte · S'inscrire",
-      "hasAccount": "J'ai déjà un compte · Se connecter",
-      "connectWith": "ou se connecter avec",
-      "google": "Google",
-      "apple": "Apple",
-      "epic": "Epic Games",
-      "xbox": "Xbox / Microsoft",
-      "playstation": "PlayStation",
-      "emailPasswordRequired": "Email et mot de passe requis.",
-      "loginError": "Erreur de connexion : ",
-      "signupError": "Erreur d'inscription : ",
-      "googleError": "Erreur Google : ",
-      "appleError": "Erreur Apple : ",
-      "epicError": "L'authentification Epic Games nécessite une configuration OAuth personnalisée. Veuillez contacter le support.",
-      "xboxError": "Erreur Xbox/Microsoft : ",
-      "psError": "L'authentification PlayStation nécessite une configuration OAuth personnalisée. Veuillez contacter le support.",
-      "loginSuccess": "Connexion réussie pour",
-      "signupSuccess": "Inscription réussie pour"
+    auth: {
+      loginSignup: "Connexion / Inscription",
+      email: "Email",
+      password: "Mot de passe",
+      login: "Connexion",
+      signup: "S'inscrire",
+      noAccount: "Je n'ai pas de compte · S'inscrire",
+      hasAccount: "J'ai déjà un compte · Se connecter",
+      connectWith: "ou se connecter avec",
+      google: "Google",
+      apple: "Apple",
+      epic: "Epic Games",
+      xbox: "Xbox / Microsoft",
+      playstation: "PlayStation",
+      emailPasswordRequired: "Email et mot de passe requis.",
+      loginError: "Erreur de connexion : ",
+      signupError: "Erreur d'inscription : ",
+      googleError: "Erreur Google : ",
+      appleError: "Erreur Apple : ",
+      epicError: "L'authentification Epic Games nécessite une configuration OAuth personnalisée. Veuillez contacter le support.",
+      xboxError: "Erreur Xbox/Microsoft : ",
+      psError: "L'authentification PlayStation nécessite une configuration OAuth personnalisée. Veuillez contacter le support.",
+      loginSuccess: "Connexion réussie pour",
+      signupSuccess: "Inscription réussie pour"
     },
-    "carousel": {
-      "goToSlide": "Aller à la diapositive"
+    carousel: {
+      goToSlide: "Aller à la diapositive",
+      nothing: "Rien"
     }
   },
-  "de": {
-    "nav": {
-      "games": "Spiele",
-      "news": "Nachrichten",
-      "support": "Support",
-      "shop": "Shop",
-      "login": "Anmelden",
-      "logout": "Abmelden",
-      "myAccount": "Mein Konto"
+  en: {
+    nav: {
+      games: "Games",
+      news: "News",
+      support: "Support",
+      shop: "Store",
+      login: "Log in",
+      logout: "Log out",
+      myAccount: "My Account"
     },
-    "hero": {
-      "discoverGame": "Spiel entdecken",
-      "discord": "Discord",
-      "deadlineProtocolDesc": "Ein Spiel, in dem Sie einen jungen Oberschüler spielen, der Missionen eines seltsamen Wissenschaftlers erfüllen muss, um die Schulden seiner Mutter zu begleichen."
+    hero: {
+      discoverGame: "Discover the game",
+      discord: "Discord",
+      deadlineProtocolDesc: "A game where you play as a high school student completing missions for a mysterious scientist to pay off your mother’s debts.",
+      nothingSubtitle: "Nothing",
+      nothingTitle: "Nothing",
+      btnNothing: "Nothing",
     },
-    "sections": {
-      "games": "SPIELE",
-      "news": "NACHRICHTEN"
+    sections: {
+      games: "GAMES",
+      news: "NEWS"
     },
-    "games": {
-      "deadlineProtocol": "Deadline Protocol",
-      "inDevelopment": "In Entwicklung...",
-      "findOutMore": "Mehr erfahren",
-      "nothing": "Nichts"
+    games: {
+      deadlineProtocol: "Deadline Protocol",
+      inDevelopment: "In development...",
+      findOutMore: "Learn more",
+      nothing: "Nothing"
     },
-    "news": {
-      "nothing": "Nichts"
+    news: {
+      nothing: "Nothing"
     },
-    "footer": {
-      "games": "Spiele",
-      "services": "Dienste",
-      "enterprise": "Unternehmen",
-      "community": "Gemeinschaft",
-      "about": "Über uns",
-      "careers": "Karriere",
-      "contact": "Kontakt",
-      "twitter": "Twitter",
-      "youtube": "YouTube",
-      "discord": "Discord",
-      "copyright": "© 2025 NexaForge Studios, Inc. Alle Rechte vorbehalten."
+    footer: {
+      games: "Games",
+      services: "Services",
+      enterprise: "Company",
+      community: "Community",
+      about: "About",
+      careers: "Careers",
+      contact: "Contact",
+      twitter: "Twitter",
+      youtube: "YouTube",
+      discord: "Discord",
+      copyright: "© 2025 NexaForge Studios, Inc. All rights reserved."
     },
-    "auth": {
-      "loginSignup": "Anmelden / Registrieren",
-      "email": "E-Mail",
-      "password": "Passwort",
-      "login": "Anmelden",
-      "signup": "Registrieren",
-      "noAccount": "Ich habe kein Konto · Registrieren",
-      "hasAccount": "Ich habe bereits ein Konto · Anmelden",
-      "connectWith": "oder verbinden mit",
-      "google": "Google",
-      "apple": "Apple",
-      "epic": "Epic Games",
-      "xbox": "Xbox / Microsoft",
-      "playstation": "PlayStation",
-      "emailPasswordRequired": "E-Mail und Passwort erforderlich.",
-      "loginError": "Anmeldefehler: ",
-      "signupError": "Registrierungsfehler: ",
-      "googleError": "Google-Fehler: ",
-      "appleError": "Apple-Fehler: ",
-      "epicError": "Epic Games-Authentifizierung erfordert benutzerdefinierte OAuth-Einrichtung. Bitte wenden Sie sich an den Support.",
-      "xboxError": "Xbox/Microsoft-Fehler: ",
-      "psError": "PlayStation-Authentifizierung erfordert benutzerdefinierte OAuth-Einrichtung. Bitte wenden Sie sich an den Support.",
-      "loginSuccess": "Anmeldung erfolgreich für",
-      "signupSuccess": "Registrierung erfolgreich für"
+    auth: {
+      loginSignup: "Log in / Sign up",
+      email: "Email",
+      password: "Password",
+      login: "Log in",
+      signup: "Sign up",
+      noAccount: "Don't have an account? · Sign up",
+      hasAccount: "Already have an account? · Log in",
+      connectWith: "or connect with",
+      google: "Google",
+      apple: "Apple",
+      epic: "Epic Games",
+      xbox: "Xbox / Microsoft",
+      playstation: "PlayStation",
+      emailPasswordRequired: "Email and password required.",
+      loginError: "Login error: ",
+      signupError: "Sign-up error: ",
+      googleError: "Google error: ",
+      appleError: "Apple error: ",
+      epicError: "Epic Games authentication requires a custom OAuth setup. Please contact support.",
+      xboxError: "Xbox/Microsoft error: ",
+      psError: "PlayStation authentication requires a custom OAuth setup. Please contact support.",
+      loginSuccess: "Login successful for",
+      signupSuccess: "Sign-up successful for"
     },
-    "carousel": {
-      "goToSlide": "Zur Folie gehen"
+    carousel: {
+      goToSlide: "Go to slide",
+      nothing: "Nothing"
+    }
+  },
+  de: {
+    nav: {
+      games: "Spiele",
+      news: "Neuigkeiten",
+      support: "Support",
+      shop: "Shop",
+      login: "Anmelden",
+      logout: "Abmelden",
+      myAccount: "Mein Konto"
+    },
+    hero: {
+      discoverGame: "Spiel entdecken",
+      discord: "Discord",
+      deadlineProtocolDesc: "Ein Spiel, in dem du einen Schüler spielst, der Missionen für einen mysteriösen Wissenschaftler erledigen muss, um die Schulden seiner Mutter zu begleichen.",
+      nothingSubtitle: "Nichts",
+      nothingTitle: "Nichts",
+      btnNothing: "Nichts",
+    },
+    sections: {
+      games: "SPIELE",
+      news: "NEWS"
+    },
+    games: {
+      deadlineProtocol: "Deadline Protocol",
+      inDevelopment: "In Entwicklung...",
+      findOutMore: "Mehr erfahren",
+      nothing: "Nichts"
+    },
+    news: {
+      nothing: "Nichts"
+    },
+    footer: {
+      games: "Spiele",
+      services: "Dienste",
+      enterprise: "Unternehmen",
+      community: "Community",
+      about: "Über uns",
+      careers: "Karriere",
+      contact: "Kontakt",
+      twitter: "Twitter",
+      youtube: "YouTube",
+      discord: "Discord",
+      copyright: "© 2025 NexaForge Studios, Inc. Alle Rechte vorbehalten."
+    },
+    auth: {
+      loginSignup: "Anmelden / Registrieren",
+      email: "E-Mail",
+      password: "Passwort",
+      login: "Anmelden",
+      signup: "Registrieren",
+      noAccount: "Kein Konto? · Registrieren",
+      hasAccount: "Schon ein Konto? · Einloggen",
+      connectWith: "oder verbinden mit",
+      google: "Google",
+      apple: "Apple",
+      epic: "Epic Games",
+      xbox: "Xbox / Microsoft",
+      playstation: "PlayStation",
+      emailPasswordRequired: "E-Mail und Passwort erforderlich.",
+      loginError: "Login-Fehler: ",
+      signupError: "Registrierungsfehler: ",
+      googleError: "Google-Fehler: ",
+      appleError: "Apple-Fehler: ",
+      epicError: "Epic Games-Login benötigt eine individuelle OAuth-Konfiguration. Bitte Support kontaktieren.",
+      xboxError: "Xbox/Microsoft-Fehler: ",
+      psError: "PlayStation-Login benötigt eine individuelle OAuth-Konfiguration. Bitte Support kontaktieren.",
+      loginSuccess: "Login erfolgreich für",
+      signupSuccess: "Registrierung erfolgreich für"
+    },
+    carousel: {
+      goToSlide: "Zur Folie",
+      nothing: "Nichts"
+    }
+  },
+  ru: {
+    nav: {
+      games: "Игры",
+      news: "Новости",
+      support: "Поддержка",
+      shop: "Магазин",
+      login: "Войти",
+      logout: "Выйти",
+      myAccount: "Мой аккаунт"
+    },
+    hero: {
+      discoverGame: "Открыть игру",
+      discord: "Discord",
+      deadlineProtocolDesc: "Игра, где вы играете за школьника, выполняющего задания таинственного учёного, чтобы выплатить долги своей матери.",
+      nothingSubtitle: "Ничего",
+      nothingTitle: "Ничего",
+      btnNothing: "Ничего",
+    },
+    sections: {
+      games: "ИГРЫ",
+      news: "НОВОСТИ"
+    },
+    games: {
+      deadlineProtocol: "Deadline Protocol",
+      inDevelopment: "В разработке...",
+      findOutMore: "Узнать больше",
+      nothing: "Ничего"
+    },
+    news: {
+      nothing: "Ничего"
+    },
+    footer: {
+      games: "Игры",
+      services: "Сервисы",
+      enterprise: "Компания",
+      community: "Сообщество",
+      about: "О нас",
+      careers: "Карьера",
+      contact: "Контакты",
+      twitter: "Twitter",
+      youtube: "YouTube",
+      discord: "Discord",
+      copyright: "© 2025 NexaForge Studios, Inc. Все права защищены."
+    },
+    auth: {
+      loginSignup: "Войти / Зарегистрироваться",
+      email: "Email",
+      password: "Пароль",
+      login: "Войти",
+      signup: "Регистрация",
+      noAccount: "Нет аккаунта? · Зарегистрироваться",
+      hasAccount: "Уже есть аккаунт? · Войти",
+      connectWith: "или войти через",
+      google: "Google",
+      apple: "Apple",
+      epic: "Epic Games",
+      xbox: "Xbox / Microsoft",
+      playstation: "PlayStation",
+      emailPasswordRequired: "Нужны email и пароль.",
+      loginError: "Ошибка входа: ",
+      signupError: "Ошибка регистрации: ",
+      googleError: "Ошибка Google: ",
+      appleError: "Ошибка Apple: ",
+      epicError: "Epic Games требует индивидуальную настройку OAuth. Свяжитесь с поддержкой.",
+      xboxError: "Ошибка Xbox/Microsoft: ",
+      psError: "PlayStation требует индивидуальную настройку OAuth. Свяжитесь с поддержкой.",
+      loginSuccess: "Успешный вход для",
+      signupSuccess: "Успешная регистрация для"
+    },
+    carousel: {
+      goToSlide: "Перейти к слайду",
+      nothing: "Ничего"
+    }
+  },
+  zh: {
+    nav: {
+      games: "游戏",
+      news: "新闻",
+      support: "支持",
+      shop: "商店",
+      login: "登录",
+      logout: "退出",
+      myAccount: "我的账号"
+    },
+    hero: {
+      discoverGame: "探索游戏",
+      discord: "Discord",
+      deadlineProtocolDesc: "一款游戏，你将扮演一名高中生，接受神秘科学家的任务来偿还母亲的债务。",
+      nothingSubtitle: "无",
+      nothingTitle: "无",
+      btnNothing: "无",
+    },
+    sections: {
+      games: "游戏",
+      news: "新闻"
+    },
+    games: {
+      deadlineProtocol: "Deadline Protocol",
+      inDevelopment: "开发中...",
+      findOutMore: "了解更多",
+      nothing: "无"
+    },
+    news: {
+      nothing: "无"
+    },
+    footer: {
+      games: "游戏",
+      services: "服务",
+      enterprise: "企业",
+      community: "社区",
+      about: "关于我们",
+      careers: "招聘",
+      contact: "联系我们",
+      twitter: "Twitter",
+      youtube: "YouTube",
+      discord: "Discord",
+      copyright: "© 2025 NexaForge Studios, Inc. 版权所有."
+    },
+    auth: {
+      loginSignup: "登录 / 注册",
+      email: "邮箱",
+      password: "密码",
+      login: "登录",
+      signup: "注册",
+      noAccount: "没有账号？· 注册",
+      hasAccount: "已有账号？· 登录",
+      connectWith: "或使用以下方式登录",
+      google: "Google",
+      apple: "Apple",
+      epic: "Epic Games",
+      xbox: "Xbox / Microsoft",
+      playstation: "PlayStation",
+      emailPasswordRequired: "需要邮箱和密码。",
+      loginError: "登录错误：",
+      signupError: "注册错误：",
+      googleError: "Google 错误：",
+      appleError: "Apple 错误：",
+      epicError: "Epic Games 登录需要自定义 OAuth 配置。请联系支持。",
+      xboxError: "Xbox/Microsoft 错误：",
+      psError: "PlayStation 登录需要自定义 OAuth 配置。请联系支持。",
+      loginSuccess: "登录成功：",
+      signupSuccess: "注册成功："
+    },
+    carousel: {
+      goToSlide: "跳转到幻灯片",
+      nothing: "无"
     }
   }
 };
 
-// Get translation by key path
+
 function getTranslation(key, lang = currentLanguage) {
   const keys = key.split('.');
   let value = translations[lang];
@@ -155,30 +384,24 @@ function getTranslation(key, lang = currentLanguage) {
   return value || key;
 }
 
-// Current language (default to French)
 let currentLanguage = 'fr';
 
-// Apply translations to all elements
 function applyTranslations() {
-  // Translate text content
   document.querySelectorAll('[data-translate]').forEach(element => {
     const key = element.getAttribute('data-translate');
     element.textContent = getTranslation(key);
   });
 
-  // Translate placeholders
   document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
     const key = element.getAttribute('data-translate-placeholder');
     element.placeholder = getTranslation(key);
   });
 
-  // Update carousel indicators aria-labels
   document.querySelectorAll('.indicator').forEach((indicator, index) => {
     indicator.setAttribute('aria-label', getTranslation('carousel.goToSlide') + ' ' + (index + 1));
   });
 }
 
-// Language selector event
 document.getElementById('language-select').addEventListener('change', (e) => {
   currentLanguage = e.target.value;
   applyTranslations();
@@ -187,7 +410,6 @@ document.getElementById('language-select').addEventListener('change', (e) => {
 /*************************
  * Basic functionality
  *************************/
-// Smooth anchors
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -198,21 +420,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Scroll animations
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 }, observerOptions);
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Header scroll effect
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header');
   if (window.scrollY > 100) header.style.background = 'rgba(0, 0, 0, 0.95)';
   else header.style.background = 'rgba(0, 0, 0, 0.9)';
 });
 
-// Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 hamburger.addEventListener('click', () => {
@@ -229,7 +448,6 @@ const indicatorsWrapper = document.getElementById('carousel-indicators');
 let current = 0;
 let autoPlayTimer = null;
 
-// Create indicators
 slides.forEach((_, i) => {
   const dot = document.createElement('div');
   dot.className = 'indicator' + (i === 0 ? ' active' : '');
@@ -291,12 +509,10 @@ const firebaseConfig = {
   measurementId: "G-7GJXYPMSZD"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// DOM elements
 const openAuth = document.getElementById('open-auth');
 const authModal = document.getElementById('auth-modal');
 const authClose = document.getElementById('auth-close');
@@ -306,7 +522,7 @@ const authAction = document.getElementById('auth-action');
 const toggleAuthMode = document.getElementById('toggle-auth-mode');
 const authMessage = document.getElementById('auth-message');
 
-let mode = 'login'; // 'login' or 'signup'
+let mode = 'login';
 
 function openModal() {
   authModal.style.display = 'flex';
@@ -335,7 +551,6 @@ toggleAuthMode.addEventListener('click', () => {
   authMessage.style.display = 'none';
 });
 
-// Email/Password authentication
 authAction.addEventListener('click', async () => {
   const email = authEmail.value.trim();
   const password = authPassword.value;
@@ -353,7 +568,6 @@ authAction.addEventListener('click', async () => {
       userCredential = await signInWithEmailAndPassword(auth, email, password);
     } else {
       userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      // Save user data to Firestore
       await setDoc(doc(db, "users", userCredential.user.uid), {
         email: userCredential.user.email,
         createdAt: new Date().toISOString()
@@ -368,7 +582,6 @@ authAction.addEventListener('click', async () => {
   }
 });
 
-// Google Authentication
 document.getElementById('btn-google').addEventListener('click', async () => {
   const provider = new GoogleAuthProvider();
   provider.addScope('profile');
@@ -377,7 +590,6 @@ document.getElementById('btn-google').addEventListener('click', async () => {
   try {
     const result = await signInWithPopup(auth, provider);
 
-    // Save user data to Firestore
     await setDoc(doc(db, 'users', result.user.uid), {
       email: result.user.email,
       displayName: result.user.displayName,
@@ -393,7 +605,6 @@ document.getElementById('btn-google').addEventListener('click', async () => {
   }
 });
 
-// Other social logins (placeholders for now)
 document.getElementById('btn-apple').addEventListener('click', () => {
   authMessage.textContent = "Apple authentication coming soon!";
   authMessage.style.display = 'block';
@@ -414,13 +625,11 @@ document.getElementById('btn-ps').addEventListener('click', () => {
   authMessage.style.display = 'block';
 });
 
-// Post-login UI update
 function onLoginSuccess(email, isNew = false) {
   closeModal();
   const openAuthLink = document.getElementById('open-auth');
   openAuthLink.textContent = email ? (email.split('@')[0] || getTranslation('nav.myAccount')) : getTranslation('nav.myAccount');
 
-  // Add logout option if not already present
   if (!document.getElementById('logout-link')) {
     const li = document.createElement('li');
     const a = document.createElement('a');
@@ -444,14 +653,12 @@ function onLoginSuccess(email, isNew = false) {
   console.log((isNew ? getTranslation('auth.signupSuccess') : getTranslation('auth.loginSuccess')), email);
 }
 
-// Listen to auth state changes
 onAuthStateChanged(auth, user => {
   const openAuthLink = document.getElementById('open-auth');
 
   if (user) {
     openAuthLink.textContent = user.email ? user.email.split('@')[0] : (user.displayName || getTranslation('nav.myAccount'));
 
-    // Add logout button if user is logged in and button doesn't exist
     if (!document.getElementById('logout-link')) {
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -471,10 +678,8 @@ onAuthStateChanged(auth, user => {
       document.querySelector('.nav-menu').appendChild(li).appendChild(a);
     }
   } else {
-    // User is signed out
     openAuthLink.textContent = getTranslation('nav.login');
 
-    // Remove logout button if it exists
     const logoutLink = document.getElementById('logout-link');
     if (logoutLink) {
       logoutLink.parentElement.remove();
@@ -482,10 +687,8 @@ onAuthStateChanged(auth, user => {
   }
 });
 
-// Apply initial translations
 document.addEventListener('DOMContentLoaded', () => {
   applyTranslations();
 });
 
-// Apply translations immediately
 applyTranslations();
